@@ -1,12 +1,15 @@
-const int LED_PIN = 13;
+const int kButton = 8;
+const int kPot = A0;
 
 void setup() {
-    pinMode(LED_PIN, OUTPUT);
+    pinMode(kButton, INPUT_PULLUP);
+    pinMode(kPot, INPUT);
+
+    Serial.begin(9600);
 }
 
 void loop() {
-    digitalWrite(LED_PIN, HIGH);
-    delay(500);
-    digitalWrite(LED_PIN, LOW);
-    delay(500);
+    int button = digitalRead(kButton);
+    int pot = analogRead(kPot);
+    Serial.println("But: " + String(button) + "    Pot: " + String(pot));
 }
