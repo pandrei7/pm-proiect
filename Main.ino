@@ -276,7 +276,7 @@ static void gameOver() {
     Song song = player_won ? kHappySong : kSadSong;
     while (true) {
         playSong(kBuzzer, song);
-        delay(250);
+        delay(750);
     }
 }
 
