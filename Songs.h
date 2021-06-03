@@ -17,9 +17,15 @@ struct Song {
 
 // A song to celebrate winning the game.
 const Song kHappySong = {
-    { NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3, NOTE_G3, 0, NOTE_B3, NOTE_C4 },
-    { 4, 8, 8, 4, 4, 4, 4, 4 },
-    8
+    { NOTE_FS5, NOTE_FS5, NOTE_D5, NOTE_B4, NOTE_B4, NOTE_E5,
+      NOTE_E5, NOTE_E5, NOTE_GS5, NOTE_GS5, NOTE_A5, NOTE_B5,
+      NOTE_A5, NOTE_A5, NOTE_A5, NOTE_E5, NOTE_D5, NOTE_FS5,
+      NOTE_FS5, NOTE_FS5, NOTE_E5, NOTE_E5, NOTE_FS5, NOTE_E5 },
+    { 8, 8, 8, 4, 4, 4,
+      4, 5, 8, 8, 8, 8,
+      8, 8, 8, 4, 4, 4,
+      4, 5, 8, 8, 8, 8 },
+    24
 };
 
 // A song used when the player loses the game.
