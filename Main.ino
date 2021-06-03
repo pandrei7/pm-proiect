@@ -172,10 +172,18 @@ static void evaluateGuess() {
     }
 }
 
+static void printDebugInfo() {
+    Serial.println("Guessed: " + String(seq_tried));
+    Serial.println(
+        "Tries: " + String(tries) + "\tTime: " + String(seconds_left) + "s"
+    );
+}
+
 static void preFeedback() {
     kLcd.clear();
     kLcd.noBlink();
 
+    printDebugInfo();
     evaluateGuess();
     player_won = correct_elems >= SEQ_LEN;
 
@@ -271,7 +279,7 @@ void setup() {
     chooseRandomSeq();
 
     Serial.begin(9600);
-    Serial.println("Chose code: " + String(seq));
+    Serial.println("Chosen code: " + String(seq));
 }
 
 void loop() {
